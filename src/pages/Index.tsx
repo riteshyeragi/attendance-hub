@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { GraduationCap, UserCog } from "lucide-react";
+import { GraduationCap, UserCog, Users } from "lucide-react";
 
 const Index = () => {
   const navigate = useNavigate();
@@ -57,8 +57,28 @@ const Index = () => {
           </div>
         </div>
 
+        {/* CivicSnap Community */}
+        <div
+          onClick={() => navigate("/communities")}
+          className="mt-6 rounded-lg border border-border bg-card p-4 cursor-pointer hover:border-primary/50 transition-colors group"
+        >
+          <div className="flex items-center gap-4">
+            <div className="rounded-md bg-primary/10 p-2.5">
+              <Users className="h-5 w-5 text-primary" />
+            </div>
+            <div className="flex-1">
+              <h2 className="font-medium text-foreground group-hover:text-primary transition-colors">
+                CivicSnap Community
+              </h2>
+              <p className="text-sm text-muted-foreground">
+                Join civic communities, raise local issues
+              </p>
+            </div>
+          </div>
+        </div>
+
         {/* Demo Access */}
-        <div className="mt-8 rounded-lg border border-dashed border-border bg-card/50 p-4">
+        <div className="mt-6 rounded-lg border border-dashed border-border bg-card/50 p-4">
           <p className="text-xs text-muted-foreground text-center mb-3">Quick Demo Access</p>
           <div className="flex gap-2">
             <Button
